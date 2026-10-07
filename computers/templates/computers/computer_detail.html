@@ -1,0 +1,10 @@
+{% extends 'computers/base.html' %}
+{% block content %}
+    <h1>{{ object.brand }} {{ object.model_name }}</h1>
+    <p>CPU: {{ object.cpu }}</p>
+    <p>RAM: {{ object.ram_gb }} GB</p>
+    <p>Price: ${{ object.price }}</p>
+    <br>
+    <a href="{% url 'computer_update' object.pk %}">Edit</a> |
+    <a href="{% url 'computer_delete' object.pk %}">Delete</a>
+{% endblock %}
