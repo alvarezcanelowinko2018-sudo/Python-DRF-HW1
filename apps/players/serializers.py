@@ -24,6 +24,6 @@ class PlayerSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         salary = attrs.get('salary')
         number = attrs.get('number')
-        if salary == number:
+        if salary is not None and number is not None and salary == number:
             raise serializers.ValidationError('Salary cannot be equal to kit number')
         return attrs
