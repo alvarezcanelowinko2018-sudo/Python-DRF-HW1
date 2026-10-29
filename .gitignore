@@ -1,6 +1,10 @@
-venv/
-.venv/
+.env
+mysql/
+*.pem
 __pycache__/
 *.pyc
-db.sqlite3
 .idea/
+.venv/
+venv/
+*.sqlite3
+db.sqlite3
